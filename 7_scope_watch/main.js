@@ -5,6 +5,7 @@ app.controller('BookController' , function($scope) {
 	$scope.name="Scope for BookController";
 
   $scope.addToWishList=function(book) {
+      console.log($scope.wishListCount);
       $scope.wishListCount++;
   };
 

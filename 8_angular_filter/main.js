@@ -1,7 +1,18 @@
 
 var app = angular.module('myApp', []);
-
+app.filter('superstar', function() {
+  return function(nickname, name) {
+    return nickname + " "+name.split(" ")[0];
+  };
+})
+app.filter('listname', function() {
+  return function(profile, namelist) {
+    //if(profile.name === namelist)
+    return profile;
+  };
+})
 app.controller('ProfileController', function ($scope) {
+
 	$scope.profiles = [
     {
       name: "Twin PanichSombat",
